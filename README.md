@@ -1,7 +1,7 @@
 Die, Die, My Vagrant
 =========================
 
-A highly re-usable simple web development vagrant box:
+A highly forkable CentOS/Ansible Vagrant setup:
   * Based on CentOS7 because fuck ubuntu
   * Provides Ansible (Local) as a provisioner.
   * Leans on the provisioner and plugins to do all the work at runtime, not a custom managed vagrant box that will get out of date quickly.

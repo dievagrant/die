@@ -5,7 +5,5 @@
 
   roles:
     - common
-    - php-fpm
-    - nginx
-    - mariadb
+    - demo-app
 

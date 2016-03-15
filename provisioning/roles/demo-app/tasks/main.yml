@@ -1,0 +1,3 @@
+---
+- name: Create 'demo-app'
+  copy: src=index.html dest=/srv/dieroot
