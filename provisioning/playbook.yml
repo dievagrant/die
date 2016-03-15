@@ -1,0 +1,11 @@
+---
+- name: Die! Die! My Vagrant!
+  hosts: all
+  user: root
+
+  roles:
+    - common
+    - php-fpm
+    - nginx
+    - mariadb
+

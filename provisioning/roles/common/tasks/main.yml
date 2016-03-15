@@ -1,0 +1,24 @@
+---
+- name: Disable SElinux
+  selinux: state=disabled
+
+- name: Disable firewalls
+  service: name=firewalld state=stopped
+
+- name: Copy the NGINX repository definition
+  copy: src=nginx.repo dest=/etc/yum.repos.d/
+  
+- name: Copy the EPEL repository definition
+  copy: src=epel.repo dest=/etc/yum.repos.d/
+
+- name: Create the GPG key for NGINX
+  copy: src=RPM-GPG-KEY-NGINX dest=/etc/pki/rpm-gpg
+
+- name: Create the GPG key for EPEL
+  copy: src=RPM-GPG-KEY-EPEL-7 dest=/etc/pki/rpm-gpg
+
+- name: Add group "die"
+  group: name=die
+
+- name: Add user "die"
+  user: name=die group=die home=/srv/dieroot/
