@@ -1,5 +1,8 @@
 ---
 # Common Dev Tools to be installed
-devtools:
-  - git
-  - nodejs
+common:
+  devtools:
+    - git
+    - npm
+  npmdevtools:
+    - bower
