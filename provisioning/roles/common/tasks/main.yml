@@ -23,6 +23,6 @@
 - name: Add user "die"
   user: name=die group=die home=/srv/dieroot/
 
-- name: Install git package
-  yum: name=git state=installed
-   
+- name: Install dev tools
+  yum: name={{ item }} state=installed
+  with_items: "{{devtools}}"
