@@ -1,0 +1,86 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Die, Die, My Vagrant</title>
+    <link rel="stylesheet" href="css/foundation.css" />
+    <link rel="stylesheet" href="css/die.css" />
+  </head>
+  <body>
+
+    <div class="title-bar" data-responsive-toggle="main-menu" data-hide-for="medium">
+      <button class="menu-icon" type="button" data-toggle></button>
+      <div class="title-bar-title">Die! Die! My Vagrant!</div>
+    </div>
+
+    <nav class="top-bar" id="main-menu">
+      <div class="top-bar-left">
+        <ul class="dropdown menu" data-dropdown-menu>
+          <li class="menu-text">Die! Die! My Vagrant!</li>
+        </ul>
+      </div>
+      <div class="top-bar-right">
+        <ul class="menu" data-responsive-menu="drilldown medium-dropdown">
+          <li><a href="https://github.com/dievagrant/die">Source</a></li>
+          <li><a href="https://github.com/dievagrant/die/issues">Issues</a></li>
+          <li><a href="#">Roles Library</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <section id="hero" class="lod">
+      <div class="row">
+        <div class="small-12 columns">
+          <h1>Die</h1>
+          <h4>A highly forkable CentOS/Ansible Vagrant setup</h4>
+          
+        </div>
+      </div>
+    </section>
+
+    <section id="summary">
+      <div class="row">
+        <div class="small-12 columns">
+          <h5>Create a vagrant box for your project without having to maintain a vagrant box for your project.</h5>
+          <p>
+            <ul>
+              <li>Based on CentOS7 because fuck ubuntu</li>
+              <li>Provides Ansible (Local) as a provisioner.</li>
+              <li>Leans on the provisioner and plugins to do all the work at runtime, not a custom managed vagrant box that will get out of date quickly.</li>
+            </ul>
+          </p>
+          <h3>Installation</h3>
+          <ol>
+            <li>Install Virtualbox</li>
+            <li>Install Vagrant</li>
+            <li><code>vagrant plugin install vagrant-vbguest</code></li>
+          </ol>
+          <h3>Start your project from <em>Die</em>:</h3>
+            <ol>
+              <li>Fork Die</li>
+              <li>Clone your fork</li>
+              <li>Uncomment the server roles and tech you need</li>
+              <li><code>vagrant up</code></li>
+            </ol>
+          <h3>Automate your own application provisioner</h3>
+          <p>Create your own provisioning spec to enable easy contributor/tester environments.</p>
+          <ol>
+            <li>Copy the ansible skeleton role</li>
+            <li>Add dependencies</li>
+            <li>Add tasks</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <script src="js/vendor/jquery.min.js"></script>
+    <script src="js/vendor/what-input.min.js"></script>
+    <script src="js/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+
+  </body>
+</html>
