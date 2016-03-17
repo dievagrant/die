@@ -1,0 +1,5 @@
+---
+# Common Dev Tools to be installed
+devtools:
+  - git
+  - nodejs

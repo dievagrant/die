@@ -1,17 +1,6 @@
 ---
 # Variables listed here are applicable to all host groups
 
-# MySQL settings
-mysqlservice: mysqld
-mysql_port: 3306
-default_db_name: die
-default_db_user: die
-default_db_password: myvagrant
-
-# nginx settings
-nginx_port: 80
-server_hostname: die.lvh.me
-
 # Disable All Updates
 # By default automatic updates are enabled, set this value to true to disable all automatic updates
 auto_up_disable: false
@@ -21,8 +10,3 @@ auto_up_disable: false
 #  false = Development, minor, and major updates are all disabled
 #  minor = Minor updates are enabled, development, and major updates are disabled
 core_update_level: true
-
-# Common Dev Tools to be installed
-devtools:
-  - git
-  - nodejs

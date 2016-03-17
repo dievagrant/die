@@ -1,0 +1,6 @@
+---
+mysqlservice: mysqld
+mysql_port: 3306
+default_db_name: die
+default_db_user: die
+default_db_password: myvagrant
