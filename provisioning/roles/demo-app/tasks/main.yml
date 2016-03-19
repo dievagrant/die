@@ -1,3 +1,13 @@
 ---
-#- name: Create 'demo-app' from local repo clone
-  #git: repo=https://github.com/dievagrant/demo-app.git dest=/srv/dieroot
+- name: Download Demo App (die's webpage)
+  get_url: url=https://github.com/dievagrant/die/archive/gh-pages.zip dest=/srv/dieroot/gh-pages.zip
+
+- name: Create dieroot directory
+  file: path=/srv/dieroot/demo-app state=directory mode=0755 owner=die group=die
+
+- name: Unpack Demo App
+  unarchive: src=/srv/dieroot/gh-pages.zip dest=/srv/dieroot/ owner=die group=die
+
+- name: Add nginx vhost for Demo App
+  copy: src=demo-app.vhost.conf dest=/etc/nginx/conf.d/
+  notify: restart nginx

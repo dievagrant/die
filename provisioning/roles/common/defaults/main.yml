@@ -4,5 +4,6 @@ common:
   devtools:
     - git
     - npm
+    - unzip
   npmdevtools:
     - bower

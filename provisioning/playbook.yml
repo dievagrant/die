@@ -5,6 +5,4 @@
 
   roles:
     - common
-    - nginx
     - demo-app
-
