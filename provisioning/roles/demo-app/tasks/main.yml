@@ -2,11 +2,16 @@
 - name: Download Demo App (die's webpage)
   get_url: url=https://github.com/dievagrant/die/archive/gh-pages.zip dest=/srv/dieroot/gh-pages.zip
 
-- name: Create dieroot directory
-  file: path=/srv/dieroot/demo-app state=directory mode=0755 owner=die group=die
+- name: Create app directory
+  file: path=/srv/dieroot/demo-app state=directory
 
 - name: Unpack Demo App
-  unarchive: src=/srv/dieroot/gh-pages.zip dest=/srv/dieroot/ owner=die group=die
+  unarchive: 
+    src: /srv/dieroot/gh-pages.zip
+    dest: /srv/dieroot/demo-app
+    owner: die
+    group: die
+    creates: /srv/dieroot/demo-app/die-gh-pages/index.html
 
 - name: Add nginx vhost for Demo App
   copy: src=demo-app.vhost.conf dest=/etc/nginx/conf.d/

@@ -4,5 +4,5 @@
   user: root
 
   roles:
-    - common
-    - demo-app
+    - common    # Used by everything
+    - demo-app  # http://demo-app.die.lvh.me:10080/ - The Die Vagrant homepage
