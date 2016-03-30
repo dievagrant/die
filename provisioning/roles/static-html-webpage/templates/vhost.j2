@@ -1,0 +1,9 @@
+ server {
+    listen   80; ## listen for ipv4; this line is default and implied
+
+    root /srv/dieroot/{{ name }};
+    index index.html;
+
+    # Make site accessible from http://localhost/
+    server_name {{ name }}.die.lvh.me;
+}
