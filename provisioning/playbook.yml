@@ -5,16 +5,11 @@
 
   roles:
     - common    # Used by everything
-    #- demo-app  # http://demo-app.die.lvh.me:10080/ - The Die Vagrant homepage
-    #- { role: static-html-webpage, name: 'flatsite'}
-    #- { role: static-html-webpage, name: 'anothersite'}
-
+    #- { role: static-html-webpage, name: 'mysite'}
     ###### Static HTML Webpage - a standard role ######
     #   Creates a docroot at ./dieroot/$name (i.e. ./dieroot/mysite), and
-    #   exposes this at http://mysite.die.lvh.me:10080
+    #   exposes this at http://mysite.die.lvh.me:10080 using nginx
     #   Add the following to the list of Roles to enable. Customize "name".
     #   You can add many instances of this role safely.
-    ##
     #     - { role: static-html-webpage, name: 'mysite'}
     ###################################################
-
